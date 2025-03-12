@@ -5,9 +5,9 @@
 # collections -> ajuda a preencher e manipula eficientemente as estruturas de dados como tuplas, dicionários e listas.
 
 import requests
-from bs4 import beautifulSoup, BeautifulSoup
+from bs4 import BeautifulSoup
 import operator
-from collections import counter
+from collections import Counter
 
 
 
@@ -23,7 +23,7 @@ def start(url):
 
     # text in given web-page is stored under
     # the <div> tags with class <entry-content>
-    for each_text in soup.findAll('div', {'class': 'entry-content'}):
+    for each_text in soup.find_all('div', {'class': 'entry-content'}):
         content = each_text.text    # procura no html todos os 'div' e 'class' colocando em um texto
 
         word = content.lower().split()   #colocar o texto em minusculo e separar as palavras por linhas
