@@ -53,9 +53,8 @@ def create_dictionary(clean_list):
         else:
             word_count[word] = 1
 
-    for key, value in sorted(word_count.items(),
-                             key = operator.itemgetter(1)):
-    print("% s : % s " % (key, value))        #mostrar as palras que mais aparecem no texto
+    for key, value in sorted(word_count.items(), key = operator.itemgetter(1)):
+        print("% s : % s " % (key, value))        #mostrar as palras que mais aparecem no texto
 
     c = counter(word_count)
 
